@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -21,6 +22,7 @@ import { CommonModule } from '@angular/common';
     MatTooltipModule,
     MatCardModule,
     CommonModule,
+    RouterLink,
   ],
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss',
