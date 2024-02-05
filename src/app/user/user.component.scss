@@ -3,3 +3,46 @@
   right: 56px;
   bottom: 56px;
 }
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    &:last-child {
+      border-bottom: 0;
+    }
+    &:first-child {
+      cursor: unset;
+      &:hover {
+        background-color: unset;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    td {
+      height: 48px;
+
+      &:first-child {
+        padding-left: 16px;
+      }
+    }
+
+    th {
+      color: rgba(0, 0, 0, 0.4);
+      font-weight: 500;
+      font-size: 14px;
+      text-align: start;
+      height: 48px;
+
+      &:first-child {
+        padding-left: 16px;
+      }
+    }
+  }
+}
