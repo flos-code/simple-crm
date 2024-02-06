@@ -37,16 +37,35 @@
       <!-- <mat-hint>Please enter a name</mat-hint> -->
     </mat-form-field>
   </div>
+
+  <div>
+    <mat-form-field class="full-width">
+      <mat-label>Choose a date</mat-label>
+      <input
+        [disabled]="loading"
+        [(ngModel)]="birthDate"
+        matInput
+        [matDatepicker]="datepicker"
+      />
+      <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="datepicker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #datepicker>
+        <mat-datepicker-actions>
+          <button mat-button matDatepickerCancel>Cancel</button>
+          <button mat-raised-button color="primary" matDatepickerApply>
+            Apply
+          </button>
+        </mat-datepicker-actions>
+      </mat-datepicker>
+    </mat-form-field>
+  </div>
 </mat-dialog-content>
 <mat-dialog-actions>
   <button [disabled]="loading" mat-button mat-dialog-close>Cancel</button>
-  <button
-    [disabled]="loading"
-    mat-button
-    mat-dialog-close
-    cdkFocusInitial
-    (click)="saveUser()"
-  >
+  <button [disabled]="loading" mat-button mat-dialog-close (click)="saveUser()">
     Save
   </button>
 </mat-dialog-actions>
